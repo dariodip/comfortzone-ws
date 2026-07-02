@@ -1,0 +1,58 @@
+---
+import SectionHeader from "./SectionHeader.astro";
+import { site } from "../data/site";
+---
+
+<section id="spazi" class="py-20 px-4 section-alt">
+  <div class="max-w-6xl mx-auto">
+    <SectionHeader title={site.spaces.title} subtitle={site.spaces.subtitle} />
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      {site.spaces.items.map((space) => (
+        <div class="card bg-base-100 shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+          {/* Placeholder immagine — sostituire con <img src={space.image}> quando disponibili */}
+          <figure class="h-48 relative" aria-hidden="true">
+            <div
+              class="absolute inset-0"
+              style={`background: linear-gradient(135deg, ${space.type === "flex-desk" ? "oklch(0.637 0.292 12)" : "oklch(0.25 0.01 260)"} 0%, ${space.type === "flex-desk" ? "oklch(0.45 0.2 12)" : "oklch(0.15 0.005 260)"} 100%);`}
+            >
+              <div class="absolute inset-0 flex items-center justify-center">
+                {space.type === "flex-desk" ? (
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white/30" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+                  </svg>
+                ) : (
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white/30" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                  </svg>
+                )}
+              </div>
+            </div>
+          </figure>
+
+          <div class="card-body">
+            <h3 class="card-title text-xl">{space.title}</h3>
+            <p class="text-base-content/70">{space.description}</p>
+
+            <ul class="mt-4 space-y-2">
+              {space.features.map((feature) => (
+                <li class="flex items-center gap-2 text-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-primary shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="card-actions mt-6">
+              <a href="#contatti" class="btn btn-primary w-full">
+                {space.ctaLabel}
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

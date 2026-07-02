@@ -1,0 +1,41 @@
+---
+import SectionHeader from "./SectionHeader.astro";
+import { site } from "../data/site";
+
+/* Gradients per placeholder gallery — colori derivati dalla palette brand.
+   Sostituire ciascun div con <img src={image.src} alt={image.alt} ...> quando
+   le foto reali saranno disponibili in public/images/gallery/ */
+const placeholderGradients = [
+  "linear-gradient(135deg, oklch(0.637 0.292 12) 0%, oklch(0.45 0.2 30) 100%)",
+  "linear-gradient(135deg, oklch(0.25 0.01 260) 0%, oklch(0.4 0.05 260) 100%)",
+  "linear-gradient(135deg, oklch(0.875 0.19 95) 0%, oklch(0.7 0.15 70) 100%)",
+  "linear-gradient(135deg, oklch(0.55 0.2 12) 0%, oklch(0.35 0.15 350) 100%)",
+  "linear-gradient(135deg, oklch(0.3 0.02 260) 0%, oklch(0.5 0.08 200) 100%)",
+  "linear-gradient(135deg, oklch(0.75 0.12 95) 0%, oklch(0.6 0.25 12) 100%)",
+];
+---
+
+<section id="gallery" class="py-20 px-4">
+  <div class="max-w-6xl mx-auto">
+    <SectionHeader title={site.gallery.title} subtitle={site.gallery.subtitle} />
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {site.gallery.images.map((image, i) => (
+        <div class="rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 aspect-[4/3]">
+          {/* Placeholder — sostituire con img quando disponibile:
+              <img src={image.src} alt={image.alt} class="w-full h-full object-cover" loading="lazy" /> */}
+          <div
+            class="w-full h-full flex items-end p-4"
+            style={`background: ${placeholderGradients[i % placeholderGradients.length]};`}
+            role="img"
+            aria-label={image.alt}
+          >
+            <span class="text-white/60 text-xs font-medium bg-black/20 px-3 py-1 rounded-full backdrop-blur-sm">
+              {image.alt}
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

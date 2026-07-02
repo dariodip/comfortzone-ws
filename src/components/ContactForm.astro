@@ -1,0 +1,119 @@
+---
+import SectionHeader from "./SectionHeader.astro";
+import { site } from "../data/site";
+---
+
+<section id="contatti" class="py-20 px-4 section-alt">
+  <div class="max-w-2xl mx-auto">
+    <SectionHeader
+      title={site.contactForm.title}
+      subtitle={site.contactForm.subtitle}
+    />
+
+    <!--
+      Form statico — per collegare a un provider esterno:
+      1. Formspree:   action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
+      2. Netlify:     aggiungere data-netlify="true" e name="contact"
+      3. Altro:       modificare action e method secondo il provider
+    -->
+    <form class="space-y-6" action="#" method="POST">
+      <!-- Nome -->
+      <div class="form-control w-full">
+        <label class="label" for="contact-name">
+          <span class="label-text font-medium">Nome *</span>
+        </label>
+        <input
+          type="text"
+          id="contact-name"
+          name="name"
+          placeholder="Il tuo nome completo"
+          class="input input-bordered w-full"
+          required
+          autocomplete="name"
+        />
+      </div>
+
+      <!-- Email -->
+      <div class="form-control w-full">
+        <label class="label" for="contact-email">
+          <span class="label-text font-medium">Email *</span>
+        </label>
+        <input
+          type="email"
+          id="contact-email"
+          name="email"
+          placeholder="la-tua@email.it"
+          class="input input-bordered w-full"
+          required
+          autocomplete="email"
+        />
+      </div>
+
+      <!-- Telefono -->
+      <div class="form-control w-full">
+        <label class="label" for="contact-phone">
+          <span class="label-text font-medium">Telefono</span>
+        </label>
+        <input
+          type="tel"
+          id="contact-phone"
+          name="phone"
+          placeholder="+39 ..."
+          class="input input-bordered w-full"
+          autocomplete="tel"
+        />
+      </div>
+
+      <!-- Tipo di richiesta -->
+      <div class="form-control w-full">
+        <label class="label" for="contact-type">
+          <span class="label-text font-medium">Tipo di richiesta *</span>
+        </label>
+        <select
+          id="contact-type"
+          name="request_type"
+          class="select select-bordered w-full"
+          required
+        >
+          <option value="" disabled selected>Seleziona un'opzione</option>
+          {site.contactForm.requestTypes.map((type) => (
+            <option value={type}>{type}</option>
+          ))}
+        </select>
+      </div>
+
+      <!-- Messaggio -->
+      <div class="form-control w-full">
+        <label class="label" for="contact-message">
+          <span class="label-text font-medium">Messaggio</span>
+        </label>
+        <textarea
+          id="contact-message"
+          name="message"
+          placeholder="Raccontaci le tue esigenze..."
+          class="textarea textarea-bordered w-full h-32"
+          rows="4"
+        ></textarea>
+      </div>
+
+      <!-- Privacy / GDPR -->
+      <div class="form-control">
+        <label class="label cursor-pointer justify-start gap-3" for="contact-privacy">
+          <input
+            type="checkbox"
+            id="contact-privacy"
+            name="privacy"
+            class="checkbox checkbox-primary checkbox-sm"
+            required
+          />
+          <span class="label-text text-sm" set:html={site.contactForm.privacyText} />
+        </label>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="btn btn-primary w-full btn-lg">
+        {site.contactForm.ctaLabel}
+      </button>
+    </form>
+  </div>
+</section>

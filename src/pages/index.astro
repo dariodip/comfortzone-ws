@@ -1,17 +1,30 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import WhyComfortzone from "../components/WhyComfortzone.astro";
+import Spaces from "../components/Spaces.astro";
+import Services from "../components/Services.astro";
+import Audience from "../components/Audience.astro";
+import Gallery from "../components/Gallery.astro";
+import ContactForm from "../components/ContactForm.astro";
+import Location from "../components/Location.astro";
+import FAQ from "../components/FAQ.astro";
+import Footer from "../components/Footer.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <Navbar />
+  <main>
+    <Hero />
+    <WhyComfortzone />
+    <Spaces />
+    <Services />
+    <Audience />
+    <Gallery />
+    <ContactForm />
+    <Location />
+    <FAQ />
+  </main>
+  <Footer />
+</BaseLayout>

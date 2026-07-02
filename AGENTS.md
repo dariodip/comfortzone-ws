@@ -1,22 +1,43 @@
-## Development
+# AGENTS
 
-When starting the dev server, use background mode:
+## Filosofia
 
-```
-astro dev --background
-```
+Mantieni il progetto semplice.
 
-Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
+Evita overengineering.
 
-## Documentation
+Preferisci componenti piccoli.
 
-Full documentation: https://docs.astro.build
+Ogni modifica deve lasciare il progetto compilabile.
 
-Consult these guides before working on related tasks:
+## Stack
 
-- [Adding pages, dynamic routes, or middleware](https://docs.astro.build/en/guides/routing/)
-- [Working with Astro components](https://docs.astro.build/en/basics/astro-components/)
-- [Using React, Vue, Svelte, or other framework components](https://docs.astro.build/en/guides/framework-components/)
-- [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
-- [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
-- [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+- Astro
+- TypeScript
+- TailwindCSS
+- daisyUI
+
+## Convenzioni
+
+- contenuti centralizzati in src/data/site.ts
+- componenti indipendenti
+- nessuna libreria se non strettamente necessaria
+- evitare duplicazione
+
+## Prima di modificare
+
+Analizza il progetto esistente.
+
+## Dopo ogni modifica
+
+Esegui:
+
+npm run build
+
+Correggi eventuali errori.
+
+Non lasciare warning evitabili.
+
+## Design System
+
+- Utilizza quando possibile i componenti di DaisyUI

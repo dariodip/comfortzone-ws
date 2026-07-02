@@ -1,0 +1,24 @@
+---
+import SectionHeader from "./SectionHeader.astro";
+import { site } from "../data/site";
+---
+
+<section id="faq" class="py-20 px-4 section-alt">
+  <div class="max-w-3xl mx-auto">
+    <SectionHeader title={site.faq.title} subtitle={site.faq.subtitle} />
+
+    <div class="space-y-3">
+      {site.faq.items.map((faq, i) => (
+        <div class="collapse collapse-arrow bg-base-100 shadow-sm">
+          <input type="radio" name="faq-accordion" id={`faq-${i}`} />
+          <div class="collapse-title font-semibold text-base">
+            {faq.question}
+          </div>
+          <div class="collapse-content">
+            <p class="text-base-content/70">{faq.answer}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
