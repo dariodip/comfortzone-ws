@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "comfortzone";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+  --color-primary: oklch(0.637 0.292 12);
+  --color-primary-content: oklch(0.985 0 0);
+  --color-secondary: oklch(0.25 0.01 260);
+  --color-secondary-content: oklch(0.985 0 0);
+  --color-accent: oklch(0.875 0.19 95);
+  --color-accent-content: oklch(0.25 0.05 95);
+  --color-neutral: oklch(0.2 0.02 260);
+  --color-neutral-content: oklch(0.92 0.01 260);
+  --color-base-100: oklch(0.995 0.002 260);
+  --color-base-200: oklch(0.96 0.005 260);
+  --color-base-300: oklch(0.92 0.008 260);
+  --color-base-content: oklch(0.2 0.02 260);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section-alt {
+  @apply bg-base-200;
+}

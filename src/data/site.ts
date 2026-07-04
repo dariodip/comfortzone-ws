@@ -20,20 +20,20 @@ export const site = {
 
   // ─── Contatti (da compilare con dati reali) ────────────────
   contact: {
-    phone: "",
-    email: "",
-    whatsapp: "",
-    address: "",
+    phone: "+393920345773",
+    email: "comfortzone.coworking@gmail.com",
+    whatsapp: "+393920345773",
+    address: "Via E. De Amicis 15, Battipaglia (SA)",
     city: "Battipaglia",
+    cap: "84091",
     province: "SA",
-    cap: "",
-    mapsUrl: "",
-    mapsEmbed: "",
+    mapsUrl: "https://maps.app.goo.gl/dWZJEzekrzTuSCRj8",
+    mapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.645489700341!2d14.982114776112919!3d40.60887114392258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133be1e92574d1ff%3A0x1812b3a461e820d7!2sComfort%20Zone%20-%20coworking!5e1!3m2!1sit!2sit!4v1783183339684!5m2!1sit!2sit"
   } satisfies ContactInfo,
 
   social: {
-    instagram: "",
-    facebook: "",
+    instagram: "https://www.instagram.com/comfortzone_coworking/",
+    facebook: "https://www.facebook.com/comfortzonebattipaglia/",
     linkedin: "",
   } satisfies SocialLinks,
 
@@ -138,8 +138,9 @@ export const site = {
           "Uno spazio riservato e dedicato per il tuo team, con la privacy e la concentrazione di un ufficio tutto tuo. Ideale per aziende, startup e professionisti.",
         features: [
           "Spazio dedicato e riservato",
+          "Wi-Fi ad alta velocità",
           "Arredamento professionale",
-          "Wi-Fi dedicato",
+          "Caffè incluso",
           "Accesso autonomo 24/7",
           "Personalizzabile",
         ],
@@ -245,27 +246,27 @@ export const site = {
     subtitle: "Scopri gli ambienti di Comfortzone.",
     images: [
       {
-        src: "/images/gallery/coworking-space-1.jpg",
+        src: "/images/gallery/1.jpeg",
         alt: "Area coworking open space di Comfortzone a Battipaglia",
       },
       {
-        src: "/images/gallery/coworking-space-2.jpg",
+        src: "/images/gallery/2.jpeg",
         alt: "Postazioni di lavoro flessibili nel coworking Comfortzone",
       },
       {
-        src: "/images/gallery/private-office.jpg",
+        src: "/images/gallery/3.jpeg",
         alt: "Ufficio privato nel coworking Comfortzone a Battipaglia",
       },
       {
-        src: "/images/gallery/common-area.jpg",
+        src: "/images/gallery/4.jpeg",
         alt: "Area comune e relax nel coworking Comfortzone",
       },
       {
-        src: "/images/gallery/meeting-area.jpg",
+        src: "/images/gallery/5.jpeg",
         alt: "Area meeting e collaborazione in Comfortzone",
       },
       {
-        src: "/images/gallery/coffee-area.jpg",
+        src: "/images/gallery/6.jpeg",
         alt: "Area caffè nel coworking Comfortzone Battipaglia",
       },
     ] satisfies GalleryImage[],
@@ -354,7 +355,7 @@ export const site = {
     description:
       "Comfortzone è il coworking in centro a Battipaglia per freelance, aziende, startup e professionisti. Postazioni flessibili, uffici privati, Wi-Fi, caffè e accesso 24/7.",
     canonical: "",
-    ogImage: "/images/og-image.jpg",
+    ogImage: "/images/logos/1.svg",
     keywords: [
       "coworking Battipaglia",
       "coworking centro Battipaglia",
