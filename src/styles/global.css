@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
+@plugin "@tailwindcss/typography";
 
 @plugin "daisyui/theme" {
   name: "comfortzone";
@@ -26,4 +27,22 @@ html {
 
 .section-alt {
   @apply bg-base-200;
+}
+
+.prose {
+  color: var(--color-base-content);
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+  color: var(--color-base-content);
+}
+
+.prose a {
+  color: var(--color-primary);
+}
+
+.prose strong {
+  color: var(--color-base-content);
 }

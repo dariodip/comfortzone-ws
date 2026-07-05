@@ -14,18 +14,23 @@ const icons: Record<string, string> = {
 
 <section id="servizi" class="py-20 px-4">
   <div class="max-w-6xl mx-auto">
-    <SectionHeader title={site.services.title} subtitle={site.services.subtitle} />
+    <SectionHeader
+      title={site.services.title}
+      subtitle={site.services.subtitle}
+    />
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {site.services.items.map((service) => (
-        <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300 border border-base-200">
-          <div class="card-body items-center text-center">
-            <div class="text-primary mb-2" set:html={icons[service.icon]} />
-            <h3 class="card-title text-base">{service.title}</h3>
-            <p class="text-base-content/70 text-sm">{service.description}</p>
+      {
+        site.services.items.map((service) => (
+          <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300 border border-base-200">
+            <div class="card-body items-center text-center">
+              <div class="text-primary mb-2" set:html={icons[service.icon]} />
+              <h3 class="card-title text-base">{service.title}</h3>
+              <p class="text-base-content/70 text-sm">{service.description}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </div>
 </section>

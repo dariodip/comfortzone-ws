@@ -16,7 +16,11 @@ import { site } from "../data/site";
       2. Netlify:     aggiungere data-netlify="true" e name="contact"
       3. Altro:       modificare action e method secondo il provider
     -->
-    <form class="space-y-6" action="https://formspree.io/f/mrewrwpp" method="POST">
+    <form
+      class="space-y-6"
+      action="https://formspree.io/f/mrewrwpp"
+      method="POST"
+    >
       <!-- Nome -->
       <div class="form-control w-full">
         <label class="label" for="contact-name">
@@ -76,9 +80,11 @@ import { site } from "../data/site";
           required
         >
           <option value="" disabled selected>Seleziona un'opzione</option>
-          {site.contactForm.requestTypes.map((type) => (
-            <option value={type}>{type}</option>
-          ))}
+          {
+            site.contactForm.requestTypes.map((type) => (
+              <option value={type}>{type}</option>
+            ))
+          }
         </select>
       </div>
 
@@ -92,13 +98,15 @@ import { site } from "../data/site";
           name="message"
           placeholder="Raccontaci le tue esigenze..."
           class="textarea textarea-bordered w-full h-32"
-          rows="4"
-        ></textarea>
+          rows="4"></textarea>
       </div>
 
       <!-- Privacy / GDPR -->
       <div class="form-control">
-        <label class="label cursor-pointer justify-start gap-3" for="contact-privacy">
+        <label
+          class="label cursor-pointer justify-start gap-3"
+          for="contact-privacy"
+        >
           <input
             type="checkbox"
             id="contact-privacy"
@@ -106,7 +114,10 @@ import { site } from "../data/site";
             class="checkbox checkbox-primary checkbox-sm"
             required
           />
-          <span class="label-text text-sm" set:html={site.contactForm.privacyText} />
+          <span
+            class="label-text text-sm"
+            set:html={site.contactForm.privacyText}
+          />
         </label>
       </div>
 

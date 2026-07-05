@@ -28,7 +28,8 @@ export const site = {
     cap: "84091",
     province: "SA",
     mapsUrl: "https://maps.app.goo.gl/dWZJEzekrzTuSCRj8",
-    mapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.645489700341!2d14.982114776112919!3d40.60887114392258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133be1e92574d1ff%3A0x1812b3a461e820d7!2sComfort%20Zone%20-%20coworking!5e1!3m2!1sit!2sit!4v1783183339684!5m2!1sit!2sit"
+    mapsEmbed:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.645489700341!2d14.982114776112919!3d40.60887114392258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133be1e92574d1ff%3A0x1812b3a461e820d7!2sComfort%20Zone%20-%20coworking!5e1!3m2!1sit!2sit!4v1783183339684!5m2!1sit!2sit",
   } satisfies ContactInfo,
 
   social: {
@@ -285,7 +286,7 @@ export const site = {
     ],
     ctaLabel: "Invia richiesta",
     privacyText:
-      'Ho letto e accetto la <a href="/privacy" class="link link-primary">Privacy Policy</a> e acconsento al trattamento dei miei dati personali ai sensi del GDPR.',
+      'Ho letto e accetto la <a href="/legal/privacy" class="link link-primary">Privacy Policy</a> e acconsento al trattamento dei miei dati personali ai sensi del GDPR.',
   },
 
   // ─── Dove siamo ───────────────────────────────────────────
@@ -344,8 +345,8 @@ export const site = {
       { label: "FAQ", href: "#faq" },
     ] satisfies NavItem[],
     legal: [
-      { label: "Privacy Policy", href: "/privacy" },
-      { label: "Cookie Policy", href: "/cookie" },
+      { label: "Privacy Policy", href: "/legal/privacy" },
+      { label: "Cookie Policy", href: "/legal/cookie" },
     ] satisfies NavItem[],
   },
 

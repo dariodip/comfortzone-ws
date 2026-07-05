@@ -17,15 +17,17 @@ const icons: Record<string, string> = {
     <SectionHeader title={site.why.title} subtitle={site.why.subtitle} />
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {site.why.items.map((item) => (
-        <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300">
-          <div class="card-body items-center text-center">
-            <div class="text-primary mb-2" set:html={icons[item.icon]} />
-            <h3 class="card-title text-lg">{item.title}</h3>
-            <p class="text-base-content/70 text-sm">{item.description}</p>
+      {
+        site.why.items.map((item) => (
+          <div class="card bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div class="card-body items-center text-center">
+              <div class="text-primary mb-2" set:html={icons[item.icon]} />
+              <h3 class="card-title text-lg">{item.title}</h3>
+              <p class="text-base-content/70 text-sm">{item.description}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </div>
 </section>

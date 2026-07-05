@@ -17,17 +17,27 @@ const placeholderGradients = [
 
 <section id="gallery" class="py-20 px-4">
   <div class="max-w-6xl mx-auto">
-    <SectionHeader title={site.gallery.title} subtitle={site.gallery.subtitle} />
+    <SectionHeader
+      title={site.gallery.title}
+      subtitle={site.gallery.subtitle}
+    />
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {site.gallery.images.map((image, i) => (
-        <div class="relative rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 aspect-[4/3]">
-          <img src={image.src} alt={image.alt} class="w-full h-full object-cover" loading="lazy" />
-          <span class="absolute bottom-4 left-4 text-white/60 text-xs font-medium bg-black/20 px-3 py-1 rounded-full backdrop-blur-sm z-10">
-            {image.alt}
-          </span>
-        </div>
-      ))}
+      {
+        site.gallery.images.map((image, i) => (
+          <div class="relative rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 aspect-[4/3]">
+            <img
+              src={image.src}
+              alt={image.alt}
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <span class="absolute bottom-4 left-4 text-white/60 text-xs font-medium bg-black/20 px-3 py-1 rounded-full backdrop-blur-sm z-10">
+              {image.alt}
+            </span>
+          </div>
+        ))
+      }
     </div>
   </div>
 </section>

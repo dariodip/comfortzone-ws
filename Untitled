@@ -1,1 +1,0 @@
-npx astro build && npx wrangler dev

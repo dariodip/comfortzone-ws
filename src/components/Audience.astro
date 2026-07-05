@@ -14,18 +14,23 @@ const icons: Record<string, string> = {
 
 <section id="per-chi" class="py-20 px-4 section-alt">
   <div class="max-w-6xl mx-auto">
-    <SectionHeader title={site.audience.title} subtitle={site.audience.subtitle} />
+    <SectionHeader
+      title={site.audience.title}
+      subtitle={site.audience.subtitle}
+    />
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {site.audience.items.map((profile) => (
-        <div class="flex items-start gap-4 p-6 rounded-xl bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300">
-          <div class="text-primary shrink-0" set:html={icons[profile.icon]} />
-          <div>
-            <h3 class="font-semibold text-lg mb-1">{profile.title}</h3>
-            <p class="text-base-content/70 text-sm">{profile.description}</p>
+      {
+        site.audience.items.map((profile) => (
+          <div class="flex items-start gap-4 p-6 rounded-xl bg-base-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+            <div class="text-primary shrink-0" set:html={icons[profile.icon]} />
+            <div>
+              <h3 class="font-semibold text-lg mb-1">{profile.title}</h3>
+              <p class="text-base-content/70 text-sm">{profile.description}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </div>
 </section>
