@@ -23,10 +23,10 @@ export const site = {
     phone: "+393920345773",
     email: "comfortzone.coworking@gmail.com",
     whatsapp: "+393920345773",
-    address: "Via E. De Amicis 15, Battipaglia (SA)",
+    address: "Via E. De Amicis 15, Battipaglia (Salerno)",
     city: "Battipaglia",
     cap: "84091",
-    province: "SA",
+    province: "Salerno",
     mapsUrl: "https://maps.app.goo.gl/dWZJEzekrzTuSCRj8",
     mapsEmbed:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.645489700341!2d14.982114776112919!3d40.60887114392258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133be1e92574d1ff%3A0x1812b3a461e820d7!2sComfort%20Zone%20-%20coworking!5e1!3m2!1sit!2sit!4v1783183339684!5m2!1sit!2sit",
@@ -74,7 +74,7 @@ export const site = {
         icon: "location",
         title: "Posizione centrale",
         description:
-          "Nel cuore di Battipaglia, facilmente raggiungibile e ben collegato. Il tuo ufficio a due passi da tutto.",
+          "Nel cuore di Battipaglia, facilmente raggiungibile e ben collegato a Salerno e al Cilento",
       },
       {
         icon: "professional",
@@ -147,6 +147,20 @@ export const site = {
         ],
         ctaLabel: "Richiedi informazioni",
         image: "/images/space/private-office.jpg",
+      },
+      {
+        id: "registered-office",
+        type: "registered-office",
+        title: "Sede virtuale",
+        description:
+          "Scegli la professionalità di un indirizzo a Battipaglia. Una soluzione smart e conveniente per le aziende e i professionisti che desiderano una sede legale e/o operativa senza rinunciare alla visibilità e alla comodità.",
+        features: [
+          "Indirizzo commerciale",
+          "Gestione domiciliazione postale",
+          "Disponibilità per incontri di rappresentanza",
+        ],
+        ctaLabel: "Richiedi informazioni",
+        image: "/images/space/registered-office.jpg",
       },
     ] satisfies Space[],
   },
@@ -354,15 +368,27 @@ export const site = {
   seo: {
     title: "Comfortzone | Coworking in centro a Battipaglia",
     description:
-      "Comfortzone è il coworking in centro a Battipaglia per freelance, aziende, startup e professionisti. Postazioni flessibili, uffici privati, Wi-Fi, caffè e accesso 24/7.",
+      "Comfortzone è il coworking a Battipaglia per freelance, aziende, startup e professionisti. Postazioni flessibili, uffici privati, Wi-Fi, caffè e accesso 24/7.",
     canonical: "",
     ogImage: "/images/logos/1.svg",
     keywords: [
       "coworking Battipaglia",
-      "coworking centro Battipaglia",
+      "coworking Salerno",
+      "coworking Cilento",
       "uffici privati Battipaglia",
+      "uffici privati Salerno",
       "postazioni flessibili Battipaglia",
+      "postazioni flessibili Salerno",
       "spazio di lavoro Battipaglia",
+      "spazio di lavoro Salerno",
+      "ufficio arredato Battipaglia",
+      "scrivania in affitto Battipaglia",
+      "scrivania in affitto Salerno",
+      "scrivania in affitto Cilento",
+      "uffici in affitto Battipaglia",
+      "scrivania Battipaglia",
+      "scrivania Salerno",
+      "scrivania Cilento",
     ],
   } satisfies SEO,
 };

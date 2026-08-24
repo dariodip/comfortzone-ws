@@ -1,4 +1,4 @@
-export type SpaceType = "flex-desk" | "private-office";
+export type SpaceType = "flex-desk" | "private-office" | "registered-office";
 
 export interface NavItem {
   label: string;
