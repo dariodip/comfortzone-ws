@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BusinessCard from "../../components/BusinessCard.astro";
+import { members } from "../../data/members";
+
+export function getStaticPaths() {
+  return Object.keys(members).map((slug) => ({
+    params: { slug },
+    props: {
+      member: members[slug],
+    },
+  }));
+}
+
+const { member } = Astro.props;
+---
+
+<BaseLayout title={`${member.name} | Comfortzone`}>
+  <BusinessCard member={member} />
+</BaseLayout>

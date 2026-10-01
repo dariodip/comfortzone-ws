@@ -92,3 +92,16 @@ export interface BookingRequest {
   slot: TimeSlot;
   message?: string;
 }
+
+export interface Member {
+  name: string,
+  title: string,
+  image?: string,
+  piva?: string,
+  email?: string,
+  phone?: string,
+  website?: string,
+  instagram?: string,
+  facebook?: string,
+  linkedin?: string,
+}
