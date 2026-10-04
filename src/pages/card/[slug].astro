@@ -17,4 +17,12 @@ const { member } = Astro.props;
 
 <BaseLayout title={`${member.name} | Comfortzone`}>
   <BusinessCard member={member} />
+  <script>
+    import { sendGAEvent } from "../../utils/analytics";
+    const slug = window.location.pathname.split("/").pop();
+
+    sendGAEvent("business_card_view", {
+      slug,
+    });
+  </script>
 </BaseLayout>
